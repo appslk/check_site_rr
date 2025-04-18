@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ddt-extended";
+  src:
+    url("./assets/fonts/ddt-w00-extended.woff2") format("woff2"),
+    url("./assets/fonts/ddt-w00-extended.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ddt";
+  src:
+    url("./assets/fonts/ddt.woff2") format("woff2"),
+    url("./assets/fonts/ddt.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  /* Colors */
+  --color-primary: #5ff48b;
+  --color-secondary: #00bc16;
+
+  /* Fonts */
+  --font-montserrat: "Montserrat", "system-ui", "serif";
+  --font-ddt: "ddt", "system-ui", "sans-serif";
+  --font-ddt-extended: "ddt-extended", "system-ui", "sans-serif";
+
+  /* Animations */
+  --animate-accordion-open: accordionOpen 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-accordion-close: accordionClose 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-sidebar-open: sidebarOpen 300ms cubic-bezier(0.87, 0, 0.13, 1)
+    forwards;
+  --animate-sidebar-close: sidebarClose 300ms cubic-bezier(0.87, 0, 0.13, 1)
+    forwards;
+  --animate-dropdown-top: dropdownSlideDownAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-dropdown-right: dropdownSlideLeftAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-dropdown-bottom: dropdownSlideUpAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-dropdown-left: dropdownSlideRightAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes accordionOpen {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordionClose {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes sidebarOpen {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes sidebarClose {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes dropdownSlideDownAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dropdownSlideLeftAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes dropdownSlideUpAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dropdownSlideRightAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.section-padding {
+  @apply px-[15px] sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[45px] 2xl:px-[50px];
+}
+
+.gradient-text {
+  will-change: transform;
+  color: transparent;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.homepage *::selection {
+  color: black;
+  background: #5ff48c8c;
+}
+
+.dashboard *::selection {
+  color: black;
+  background: #3fff90;
+}

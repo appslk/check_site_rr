@@ -1,0 +1,258 @@
+/* Base Styles */
+.signin-container {
+    min-height: 100vh;
+    background-color: #0A0A0A;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 50;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Layout */
+  .signin-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .signin-columns {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .signin-form-column {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    order: 2;
+  }
+  
+  .signin-image-column {
+    width: 50%;
+    height: 100%;
+    order: 1;
+  }
+  
+  /* Form Container */
+  .signin-form-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  .signin-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .signin-subtitle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Messages */
+  .error-message {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(255, 107, 107, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .success-message {
+    color: #51cf66;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(81, 207, 102, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .username-display {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .wallet-address {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Features List */
+  .features-list {
+    list-style: none;
+    padding-left: 1em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gradient-check {
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .divider-line {
+    flex-grow: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0;
+  }
+  
+  .divider-stars {
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-end;
+    gap: 0.2rem;
+    opacity: 0.5;
+  }
+  
+  .star-icon {
+    font-size: 0.8rem;
+  }
+  
+  .star-icon.middle {
+    transform: translateY(-0.1rem);
+  }
+  
+  /* Buttons */
+  .buttons-container {
+    margin-top: 1.5rem;
+  }
+  
+  .connect-wallet-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .connect-wallet-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .connect-wallet-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .signin-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signin-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .signin-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  /* Sign Up Link */
+  .signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .signup-text {
+    color: #ff8a00;
+    text-decoration: none;
+  }
+  
+  .signup-text:hover {
+    opacity: 0.9;
+  }
+  
+  /* Image Column */
+  .image-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .signin-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .signin-columns {
+      flex-direction: column;
+    }
+  
+    .signin-form-column,
+    .signin-image-column {
+      width: 100%;
+    }
+  
+    .signin-form-column {
+      order: 1;
+      padding: 2rem 1rem;
+    }
+  
+    .signin-image-column {
+      order: 2;
+      height: 300px;
+    }
+  
+    .signin-title {
+      font-size: 2rem;
+    }
+  }
