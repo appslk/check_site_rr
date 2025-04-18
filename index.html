@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="57x57" href="/favicon-57x57.png" />
+    <link rel="icon" type="image/png" sizes="76x76" href="/favicon-76x76.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="/favicon-128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon-192x192.png"
+    />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Favicon.ico (for legacy browsers) -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robotic Rabbit Syndicate</title>
+  </head>
+  <body style="background-color: #0a0a0a">
+    <div id="root">
+      <div
+        style="
+          position: relative;
+          align-items: center;
+          display: flex;
+          height: 100dvh;
+          justify-content: center;
+          overflow: hidden;
+        "
+      >
+        <!-- Brick bg -->
+        <picture>
+          <source srcset="./src/assets/images/brick-bg.jpg" />
+          <img
+            src="./src/assets/images/brick-bg.jpg"
+            alt="Brick background"
+            style="position: absolute; inset: 0"
+          />
+        </picture>
+        <!-- Black tint -->
+        <div
+          style="position: absolute; inset: 0; background: hsla(0, 0%, 0%, 0.7)"
+        ></div>
+
+        <!-- Loader gif -->
+        <img
+          src="loader.gif"
+          alt="Loading"
+          width="100px"
+          height="100px"
+          style="position: relative; z-index: 1"
+        />
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
