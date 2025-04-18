@@ -1,0 +1,10 @@
+.mint-input input::-webkit-outer-spin-button,
+.mint-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mint-input input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

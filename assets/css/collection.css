@@ -1,0 +1,28 @@
+.swiper-pagination-bullet {
+  border: 2px solid var(--color-primary);
+  line-height: 0;
+  font-size: 18px;
+  width: 2em;
+  height: 2em;
+  opacity: 1;
+  background-color: transparent;
+  color: #ffffffb3;
+  display: none;
+}
+
+.swiper-pagination-bullet:hover {
+  color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: transparent;
+  color: white;
+}
+
+@media (min-width: 1280px) {
+  .swiper-pagination-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

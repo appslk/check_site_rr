@@ -1,0 +1,55 @@
+.roadmap-gradient-text[data-progress="done"] {
+  color: transparent;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-gradient-text[data-progress="in-progress"] {
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #fff75f, #bcbc00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-gradient-text[data-progress="pending"] {
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #ff5f5f, #bc0000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-gradient-background[data-progress="done"] {
+  background-image: linear-gradient(
+    to top right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.roadmap-gradient-background[data-progress="in-progress"] {
+  background-image: linear-gradient(to top right, #fff75f, #bcbc00);
+}
+
+.roadmap-gradient-background[data-progress="pending"] {
+  background-image: linear-gradient(to top right, #ff5f5f, #bc0000);
+}
+
+.roadmap-border[data-progress="done"] {
+  border-color: var(--color-secondary);
+}
+
+.roadmap-border[data-progress="in-progress"] {
+  border-color: #bcbc00;
+}
+
+.roadmap-border[data-progress="pending"] {
+  border-color: #bc0000;
+}
